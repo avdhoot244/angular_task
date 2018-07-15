@@ -1,0 +1,20 @@
+<form >
+  <div class="form-group">
+
+  <input type="number"ngModel class="form-control" placeholder="enter number" name="num1" #num1="ngModel" required><br/>
+  <div [hidden]="num1.valid" class="alert alert-danger">
+    Please enter number
+  </div>
+<input type="number" ngModel class="form-control" placeholder="enter number"  name="nume2" #num2="ngModel"required><br/>
+<div [hidden]="num2.valid" >
+  Please enter number
+</div><br/>
+
+<button (click)="addition(num1.value,num2.value)">ADDITION</button>
+<button (click)="subtraction(num1.value,num2.value)">SUBTRACTION</button>
+<button (click)="multiplication(num1.value,num2.value)">MULTIPLICATION</button>
+<button (click)="division(num1.value,num2.value)">DIVISION</button><br>
+
+<h3><label>ANSWER IS {{ans}}</label></h3>
+</div>
+</form>
